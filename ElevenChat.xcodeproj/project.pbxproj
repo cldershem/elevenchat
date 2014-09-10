@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664C19C0FADA00E204DD /* AppDelegate.swift */; };
+		B5E2664F19C0FADA00E204DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664E19C0FADA00E204DD /* ViewController.swift */; };
+		B5E2665219C0FADA00E204DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665019C0FADA00E204DD /* Main.storyboard */; };
+		B5E2665419C0FADA00E204DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665319C0FADA00E204DD /* Images.xcassets */; };
+		B5E2665719C0FADA00E204DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665519C0FADA00E204DD /* LaunchScreen.xib */; };
+		B5E2666319C0FADA00E204DD /* ElevenChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2666219C0FADA00E204DD /* ElevenChatTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5E2665D19C0FADA00E204DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E2663F19C0FADA00E204DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E2664619C0FADA00E204DD;
+			remoteInfo = ElevenChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5E2664719C0FADA00E204DD /* ElevenChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E2664B19C0FADA00E204DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E2664C19C0FADA00E204DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5E2664E19C0FADA00E204DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5E2665119C0FADA00E204DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5E2665319C0FADA00E204DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5E2665619C0FADA00E204DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B5E2665C19C0FADA00E204DD /* ElevenChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevenChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E2666119C0FADA00E204DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E2666219C0FADA00E204DD /* ElevenChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenChatTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5E2664419C0FADA00E204DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2665919C0FADA00E204DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5E2663E19C0FADA00E204DD = {
+			isa = PBXGroup;
+			children = (
+				B5E2664919C0FADA00E204DD /* ElevenChat */,
+				B5E2665F19C0FADA00E204DD /* ElevenChatTests */,
+				B5E2664819C0FADA00E204DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5E2664819C0FADA00E204DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2664719C0FADA00E204DD /* ElevenChat.app */,
+				B5E2665C19C0FADA00E204DD /* ElevenChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5E2664919C0FADA00E204DD /* ElevenChat */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2664C19C0FADA00E204DD /* AppDelegate.swift */,
+				B5E2664E19C0FADA00E204DD /* ViewController.swift */,
+				B5E2665019C0FADA00E204DD /* Main.storyboard */,
+				B5E2665319C0FADA00E204DD /* Images.xcassets */,
+				B5E2665519C0FADA00E204DD /* LaunchScreen.xib */,
+				B5E2664A19C0FADA00E204DD /* Supporting Files */,
+			);
+			path = ElevenChat;
+			sourceTree = "<group>";
+		};
+		B5E2664A19C0FADA00E204DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2664B19C0FADA00E204DD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5E2665F19C0FADA00E204DD /* ElevenChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2666219C0FADA00E204DD /* ElevenChatTests.swift */,
+				B5E2666019C0FADA00E204DD /* Supporting Files */,
+			);
+			path = ElevenChatTests;
+			sourceTree = "<group>";
+		};
+		B5E2666019C0FADA00E204DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2666119C0FADA00E204DD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5E2664619C0FADA00E204DD /* ElevenChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E2666619C0FADA00E204DD /* Build configuration list for PBXNativeTarget "ElevenChat" */;
+			buildPhases = (
+				B5E2664319C0FADA00E204DD /* Sources */,
+				B5E2664419C0FADA00E204DD /* Frameworks */,
+				B5E2664519C0FADA00E204DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ElevenChat;
+			productName = ElevenChat;
+			productReference = B5E2664719C0FADA00E204DD /* ElevenChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5E2665B19C0FADA00E204DD /* ElevenChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E2666919C0FADA00E204DD /* Build configuration list for PBXNativeTarget "ElevenChatTests" */;
+			buildPhases = (
+				B5E2665819C0FADA00E204DD /* Sources */,
+				B5E2665919C0FADA00E204DD /* Frameworks */,
+				B5E2665A19C0FADA00E204DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E2665E19C0FADA00E204DD /* PBXTargetDependency */,
+			);
+			name = ElevenChatTests;
+			productName = ElevenChatTests;
+			productReference = B5E2665C19C0FADA00E204DD /* ElevenChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5E2663F19C0FADA00E204DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Cameron Dershem";
+				TargetAttributes = {
+					B5E2664619C0FADA00E204DD = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B5E2665B19C0FADA00E204DD = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = B5E2664619C0FADA00E204DD;
+					};
+				};
+			};
+			buildConfigurationList = B5E2664219C0FADA00E204DD /* Build configuration list for PBXProject "ElevenChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5E2663E19C0FADA00E204DD;
+			productRefGroup = B5E2664819C0FADA00E204DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5E2664619C0FADA00E204DD /* ElevenChat */,
+				B5E2665B19C0FADA00E204DD /* ElevenChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5E2664519C0FADA00E204DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2665219C0FADA00E204DD /* Main.storyboard in Resources */,
+				B5E2665719C0FADA00E204DD /* LaunchScreen.xib in Resources */,
+				B5E2665419C0FADA00E204DD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2665A19C0FADA00E204DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5E2664319C0FADA00E204DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2664F19C0FADA00E204DD /* ViewController.swift in Sources */,
+				B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2665819C0FADA00E204DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2666319C0FADA00E204DD /* ElevenChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5E2665E19C0FADA00E204DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E2664619C0FADA00E204DD /* ElevenChat */;
+			targetProxy = B5E2665D19C0FADA00E204DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5E2665019C0FADA00E204DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5E2665119C0FADA00E204DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5E2665519C0FADA00E204DD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5E2665619C0FADA00E204DD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5E2666419C0FADA00E204DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5E2666519C0FADA00E204DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5E2666719C0FADA00E204DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ElevenChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5E2666819C0FADA00E204DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ElevenChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B5E2666A19C0FADA00E204DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ElevenChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElevenChat.app/ElevenChat";
+			};
+			name = Debug;
+		};
+		B5E2666B19C0FADA00E204DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ElevenChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElevenChat.app/ElevenChat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5E2664219C0FADA00E204DD /* Build configuration list for PBXProject "ElevenChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2666419C0FADA00E204DD /* Debug */,
+				B5E2666519C0FADA00E204DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E2666619C0FADA00E204DD /* Build configuration list for PBXNativeTarget "ElevenChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2666719C0FADA00E204DD /* Debug */,
+				B5E2666819C0FADA00E204DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5E2666919C0FADA00E204DD /* Build configuration list for PBXNativeTarget "ElevenChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2666A19C0FADA00E204DD /* Debug */,
+				B5E2666B19C0FADA00E204DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5E2663F19C0FADA00E204DD /* Project object */;
+}
