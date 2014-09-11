@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // set up parse
         Parse.setApplicationId("biYrAsTEvW7bnVjcruzax7Nqqb8la2oD5GzoEyG2", clientKey: "JhRbQfHK90qVbefxPPsjuKltt3rD3bjwF5MOpkAp")
         
+//        var testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.saveInBackground()
+        
         return true
     }
     
