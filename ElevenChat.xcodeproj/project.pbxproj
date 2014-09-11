@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B53FC66019C1078400A17A19 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53FC65F19C1078400A17A19 /* ColorViewController.swift */; };
+		B546979019C1E554001F5AEF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B546978F19C1E554001F5AEF /* CameraViewController.swift */; };
 		B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664C19C0FADA00E204DD /* AppDelegate.swift */; };
-		B5E2664F19C0FADA00E204DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664E19C0FADA00E204DD /* ViewController.swift */; };
+		B5E2664F19C0FADA00E204DD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664E19C0FADA00E204DD /* RootViewController.swift */; };
 		B5E2665219C0FADA00E204DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665019C0FADA00E204DD /* Main.storyboard */; };
 		B5E2665419C0FADA00E204DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665319C0FADA00E204DD /* Images.xcassets */; };
 		B5E2665719C0FADA00E204DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665519C0FADA00E204DD /* LaunchScreen.xib */; };
@@ -26,10 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B53FC65F19C1078400A17A19 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		B546978F19C1E554001F5AEF /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B5E2664719C0FADA00E204DD /* ElevenChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E2664B19C0FADA00E204DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E2664C19C0FADA00E204DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5E2664E19C0FADA00E204DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5E2664E19C0FADA00E204DD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B5E2665119C0FADA00E204DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5E2665319C0FADA00E204DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B5E2665619C0FADA00E204DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				B5E2664C19C0FADA00E204DD /* AppDelegate.swift */,
-				B5E2664E19C0FADA00E204DD /* ViewController.swift */,
+				B546978F19C1E554001F5AEF /* CameraViewController.swift */,
+				B5E2664E19C0FADA00E204DD /* RootViewController.swift */,
 				B5E2665019C0FADA00E204DD /* Main.storyboard */,
 				B5E2665319C0FADA00E204DD /* Images.xcassets */,
 				B5E2665519C0FADA00E204DD /* LaunchScreen.xib */,
 				B5E2664A19C0FADA00E204DD /* Supporting Files */,
+				B53FC65F19C1078400A17A19 /* ColorViewController.swift */,
 			);
 			path = ElevenChat;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E2664F19C0FADA00E204DD /* ViewController.swift in Sources */,
+				B5E2664F19C0FADA00E204DD /* RootViewController.swift in Sources */,
+				B546979019C1E554001F5AEF /* CameraViewController.swift in Sources */,
+				B53FC66019C1078400A17A19 /* ColorViewController.swift in Sources */,
 				B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElevenChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElevenChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -405,6 +415,7 @@
 				B5E2666819C0FADA00E204DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5E2666919C0FADA00E204DD /* Build configuration list for PBXNativeTarget "ElevenChatTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +424,7 @@
 				B5E2666B19C0FADA00E204DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
