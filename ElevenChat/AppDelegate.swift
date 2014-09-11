@@ -16,7 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // setup dropbox
+        let dbSession = DBSession(appKey: "ty5kixasdbgkv8x", appSecret: "22cisqicel37gme", root: kDBRootAppFolder)
+        
+        DBSession.setSharedSession(dbSession)
+        
+        // set up parse
+        Parse.setApplicationId("biYrAsTEvW7bnVjcruzax7Nqqb8la2oD5GzoEyG2", clientKey: "JhRbQfHK90qVbefxPPsjuKltt3rD3bjwF5MOpkAp")
+        
         return true
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        
+        // handle dropbox urls
+        if DBSession.sharedSession().handleOpenURL(url) {
+            if DBSession.sharedSession().isLinked() {
+                println("Dropbox be linked!!!!")
+            }
+            return true
+        }
+        return false
     }
 
     func applicationWillResignActive(application: UIApplication) {
