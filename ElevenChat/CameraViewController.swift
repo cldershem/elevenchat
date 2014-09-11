@@ -94,5 +94,32 @@ class CameraViewController: UIViewController {
             captureSession.startRunning()
         }
     }
+    
+    
+    
+    @IBAction func flipCamera(sender: UIButton) {
+        // Flip the camera
+        
+        // when session is running to make change you must...
+        captureSession.beginConfiguration()
+        // find and remove input
+        let currentInput = captureSession.inputs[0] as AVCaptureInput
+        captureSession.removeInput(currentInput)
+        
+        // toggle camera (if this then that if not then that)
+        cameraPosition = cameraPosition == .Back ? .Front : .Back
+        
+        // find other camera
+        if findCamera(cameraPosition) {
+            beginSession()
+        } else {
+            // show sad panda
+        }
+        
+        // commit changes
+        captureSession.commitConfiguration()
+    }
+    
+    
 }
 
