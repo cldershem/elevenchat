@@ -120,6 +120,57 @@ class CameraViewController: UIViewController {
         captureSession.commitConfiguration()
     }
     
+    @IBAction func takePhoto(sender: UIButton) {
+        if let stillOutput = self.stillImageOutput {
+            
+            // we do this on another thread so we don't hang the UI
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                
+                // find video connection
+                var videoConnection : AVCaptureConnection?
+                for connection in stillOutput.connections {
+                    // find a matching input port
+                    for port in connection.inputs! {
+                        // and matching type
+                        if port.mediaType == AVMediaTypeVideo {
+                            videoConnection = connection as? AVCaptureConnection
+                            break
+                        }
+                    }
+                    if videoConnection != nil {
+                        break // for connection
+                    }
+                }
+                
+                if videoConnection != nil {
+                    // found the video connection, let's get the image
+                    stillOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
+                        (imageSampleBuffer:CMSampleBuffer!, _) in
+                        
+                        let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer)
+                        
+                        self.didTakePhoto(imageData)
+                    }
+                }
+            }
+        }
+    }
     
+    func didTakePhoto(imageData: NSData) {
+        
+        // Example 1: if you want to show thumbnail
+        let imate = UIImage(data: imageData)
+        
+        // Example 2: if you want to save image
+        var formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
+        let prefix: String = formatter.stringFromDate(NSDate())
+        let fileName = "\(prefix).jpg"
+        
+        let tmpDirectory = NSTemporaryDirectory()
+        let snapFileName = tmpDirectory.stringByAppendingPathComponent(fileName)
+        imageData.writeToFile(snapFileName, atomically: true)
+        
+    }
 }
 
