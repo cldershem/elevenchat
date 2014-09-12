@@ -91,6 +91,38 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
         return headerCell as UIView
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // get the object
+        var selectedObject = self.objectAtIndexPath(indexPath)
+        if selectedObject is ChatUser {
+            // probably *should* have a confirmation box...
+            self.addFriend(selectedObject as ChatUser)
+        }
+        
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    // MARK: Add friend
+    func addFriend(friend:ChatUser) {
+//        var areFriends = PFQuery(className: self.parseClassName)
+        var areFriends = Friendship.query()
+        areFriends.whereKey("currentUser", equalTo: ChatUser.currentUser())
+        areFriends.whereKey("theFriend", equalTo: friend)
+        areFriends.countObjectsInBackgroundWithBlock { (count, _) -> Void in
+            if count > 0 {
+                // already friends
+                println("Not adding, already friends.")
+            } else {
+                // add friend
+                var bff = Friendship()
+                bff.currentUser = ChatUser.currentUser()
+                bff.theFriend = friend
+                bff.saveInBackground()
+                println("adding \(bff.currentUser!.username) -> \(bff.theFriend!.username)")
+            }
+        }
+    }
+    
     // MARK: Search Bar
     // delegate in story board
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
