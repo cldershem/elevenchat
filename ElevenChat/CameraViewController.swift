@@ -53,6 +53,10 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
         
     }
     
+    @IBAction func rewindFromSegue(segue:UIStoryboardSegue) {
+        println("User aborted sending a photo")
+    }
+    
     // find camera
     func findCamera(position : AVCaptureDevicePosition) -> Bool {
         
@@ -171,7 +175,7 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
         }
     }
     
-    func getSnapFileName() -> (String, String) {
+    class func getSnapFileName() -> (String, String) {
         let fileName = "lastSnap.jpg"
         let tmpDirectory = NSTemporaryDirectory()
         let snapFileName = tmpDirectory.stringByAppendingPathComponent(fileName)
@@ -183,8 +187,12 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
          // parse not dropbox
         let image = UIImage(data: imageData)
         let compressedImage = compressImage(image)
-        let (_, fullFileName) = getSnapFileName()
+        let (_, fullFileName) = CameraViewController.getSnapFileName()
         compressedImage.writeToFile(fullFileName, atomically: true)
+        
+        // Show the preview window ..
+        var sendNav = self.storyboard?.instantiateViewControllerWithIdentifier("SendNav") as UIViewController!
+        self.presentViewController(sendNav, animated: true, completion: nil)
         
         /*
         // Example 1: if you want to show thumbnail

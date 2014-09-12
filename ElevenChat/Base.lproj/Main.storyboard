@@ -72,6 +72,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prk-m4-ed9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wHq-0X-bhb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-42" y="578"/>
         </scene>
@@ -109,6 +110,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcr-G7-8wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="310" y="578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O8a-7V-bdq">
+            <objects>
+                <navigationController storyboardIdentifier="SendNav" id="rJx-cz-Szm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Quq-rd-Dcq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6rV-6M-a2n" kind="relationship" relationship="rootViewController" id="LH7-4y-38L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBN-cn-HvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="-67"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="SIW-Nf-y8f">
+            <objects>
+                <viewController id="6rV-6M-a2n" customClass="PreviewViewController" customModule="ElevenChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OVs-ls-aKK"/>
+                        <viewControllerLayoutGuide type="bottom" id="RD4-l2-FG8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBe-1C-nq4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwY-6Q-x4q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2lh-d0-cAw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eJH-76-dcj">
+                            <connections>
+                                <segue destination="wHq-0X-bhb" kind="unwind" unwindAction="rewindFromSegue:" id="Wdi-r7-7vg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="afC-IF-Upk"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imagePreview" destination="kwY-6Q-x4q" id="IRC-SD-kOO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvy-UY-1Zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-67"/>
         </scene>
     </scenes>
     <resources>
