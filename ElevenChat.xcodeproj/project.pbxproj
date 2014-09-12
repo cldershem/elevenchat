@@ -13,6 +13,8 @@
 		B546979D19C24609001F5AEF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B546979A19C24609001F5AEF /* Parse.framework */; };
 		B54697A119C2472B001F5AEF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54697A019C2472B001F5AEF /* Bolts.framework */; };
 		B54697A319C250F1001F5AEF /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54697A219C250F1001F5AEF /* ChatUser.swift */; };
+		B54697A519C32D4C001F5AEF /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54697A419C32D4C001F5AEF /* FriendsViewController.swift */; };
+		B54697A719C330C5001F5AEF /* Friendship.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54697A619C330C5001F5AEF /* Friendship.swift */; };
 		B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664C19C0FADA00E204DD /* AppDelegate.swift */; };
 		B5E2664F19C0FADA00E204DD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664E19C0FADA00E204DD /* RootViewController.swift */; };
 		B5E2665219C0FADA00E204DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665019C0FADA00E204DD /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		B546979A19C24609001F5AEF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Frameworks/parse-library-1.3.0/Parse.framework"; sourceTree = "<group>"; };
 		B54697A019C2472B001F5AEF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Frameworks/parse-library-1.3.0/Bolts.framework"; sourceTree = "<group>"; };
 		B54697A219C250F1001F5AEF /* ChatUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		B54697A419C32D4C001F5AEF /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		B54697A619C330C5001F5AEF /* Friendship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friendship.swift; sourceTree = "<group>"; };
 		B5E2664719C0FADA00E204DD /* ElevenChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E2664B19C0FADA00E204DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E2664C19C0FADA00E204DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B54697A919C33130001F5AEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B54697A619C330C5001F5AEF /* Friendship.swift */,
+				B54697A219C250F1001F5AEF /* ChatUser.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B5E2663E19C0FADA00E204DD = {
 			isa = PBXGroup;
 			children = (
@@ -105,14 +118,15 @@
 			children = (
 				B546979F19C246FD001F5AEF /* Frameworks */,
 				B5E2664C19C0FADA00E204DD /* AppDelegate.swift */,
+				B53FC65F19C1078400A17A19 /* ColorViewController.swift */,
 				B546978F19C1E554001F5AEF /* CameraViewController.swift */,
 				B5E2664E19C0FADA00E204DD /* RootViewController.swift */,
+				B54697A419C32D4C001F5AEF /* FriendsViewController.swift */,
+				B54697A919C33130001F5AEF /* Models */,
 				B5E2665019C0FADA00E204DD /* Main.storyboard */,
-				B53FC65F19C1078400A17A19 /* ColorViewController.swift */,
 				B5E2665319C0FADA00E204DD /* Images.xcassets */,
 				B5E2665519C0FADA00E204DD /* LaunchScreen.xib */,
 				B5E2664A19C0FADA00E204DD /* Supporting Files */,
-				B54697A219C250F1001F5AEF /* ChatUser.swift */,
 			);
 			path = ElevenChat;
 			sourceTree = "<group>";
@@ -246,7 +260,9 @@
 				B5E2664F19C0FADA00E204DD /* RootViewController.swift in Sources */,
 				B546979019C1E554001F5AEF /* CameraViewController.swift in Sources */,
 				B53FC66019C1078400A17A19 /* ColorViewController.swift in Sources */,
+				B54697A719C330C5001F5AEF /* Friendship.swift in Sources */,
 				B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */,
+				B54697A519C32D4C001F5AEF /* FriendsViewController.swift in Sources */,
 				B54697A319C250F1001F5AEF /* ChatUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
