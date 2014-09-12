@@ -91,6 +91,8 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
         return headerCell as UIView
     }
     
+    
+    // http://pastebin.com/NdYvPSsY <-------- does this with erros.
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // get the object
         var selectedObject = self.objectAtIndexPath(indexPath)

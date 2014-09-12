@@ -171,8 +171,22 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
         }
     }
     
-    func didTakePhoto(imageData: NSData) {
+    func getSnapFileName() -> (String, String) {
+        let fileName = "lastSnap.jpg"
+        let tmpDirectory = NSTemporaryDirectory()
+        let snapFileName = tmpDirectory.stringByAppendingPathComponent(fileName)
         
+        return (fileName, snapFileName)
+    }
+    
+    func didTakePhoto(imageData: NSData) {
+         // parse not dropbox
+        let image = UIImage(data: imageData)
+        let compressedImage = compressImage(image)
+        let (_, fullFileName) = getSnapFileName()
+        compressedImage.writeToFile(fullFileName, atomically: true)
+        
+        /*
         // Example 1: if you want to show thumbnail
         let image = UIImage(data: imageData)
         let compressedImage = compressImage(image)
@@ -189,6 +203,10 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
         
         // upload to dropbox
         dbRestClient?.uploadFile(fileName, toPath: "/", withParentRev: nil, fromPath: snapFileName)
+        */
+        
+
+        
     }
     
     func restClient(client: DBRestClient!, uploadedFile destPath: String!, from srcPath: String!, metadata: DBMetadata!) {
