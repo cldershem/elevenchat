@@ -8,9 +8,11 @@
 
 import Foundation
 
-class FriendsViewController : PFQueryTableViewController {
+class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
     // get stuff, return count, display stuff
     // PFQueryViewController is a subclass of TableViewController from Parse SDK
+    
+    var searchText = ""
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
@@ -29,12 +31,31 @@ class FriendsViewController : PFQueryTableViewController {
         self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
     }
     
+    // MARK: tableView
+    
     override func queryForTable() -> PFQuery! {
         var query : PFQuery!
         
-        query = Friendship.query()
-        query.whereKey("currentUser", equalTo: ChatUser.currentUser())
-        query.includeKey("theFriend")
+        if searchText.isEmpty {
+            query = Friendship.query()
+            query.whereKey("currentUser", equalTo: ChatUser.currentUser())
+            query.includeKey("theFriend")
+        } else {
+            // username search
+            var userNameSearch = ChatUser.query()
+            userNameSearch.whereKey("username", containsString: searchText)
+            
+            // email search
+            var emailSearch = ChatUser.query()
+            emailSearch.whereKey("email", equalTo: searchText)
+            
+            // phone number search
+            var additionalSearch = ChatUser.query()
+            additionalSearch.whereKey("additional", equalTo: searchText)
+            
+            // or them together
+            query = PFQuery.orQueryWithSubqueries([userNameSearch, emailSearch, additionalSearch])
+        }
         
         
         return query
@@ -51,8 +72,61 @@ class FriendsViewController : PFQueryTableViewController {
             var friends = object as Friendship
             
             cell?.textLabel?.text = friends.theFriend?.username
+        } else if object is ChatUser {
+            var user = object as ChatUser
+            
+            cell?.textLabel?.text = user.username
         }
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as UITableViewCell
+        
+        return headerCell as UIView
+    }
+    
+    // MARK: Search Bar
+    // delegate in story board
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        // add minimum length of search
+        searchText = searchBar.text
+        self.loadObjects()
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        // clear out search box
+        searchBar.text = nil
+        // clear out search variable
+        searchText = ""
+        // reload the table
+        self.loadObjects()
+        // hide keyboard
+        searchBar.resignFirstResponder()
+    }
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+

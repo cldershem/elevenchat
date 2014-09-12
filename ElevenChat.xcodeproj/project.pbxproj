@@ -95,6 +95,17 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		B54697AA19C3387C001F5AEF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B53FC65F19C1078400A17A19 /* ColorViewController.swift */,
+				B546978F19C1E554001F5AEF /* CameraViewController.swift */,
+				B5E2664E19C0FADA00E204DD /* RootViewController.swift */,
+				B54697A419C32D4C001F5AEF /* FriendsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		B5E2663E19C0FADA00E204DD = {
 			isa = PBXGroup;
 			children = (
@@ -116,13 +127,10 @@
 		B5E2664919C0FADA00E204DD /* ElevenChat */ = {
 			isa = PBXGroup;
 			children = (
+				B54697AA19C3387C001F5AEF /* ViewControllers */,
+				B54697A919C33130001F5AEF /* Models */,
 				B546979F19C246FD001F5AEF /* Frameworks */,
 				B5E2664C19C0FADA00E204DD /* AppDelegate.swift */,
-				B53FC65F19C1078400A17A19 /* ColorViewController.swift */,
-				B546978F19C1E554001F5AEF /* CameraViewController.swift */,
-				B5E2664E19C0FADA00E204DD /* RootViewController.swift */,
-				B54697A419C32D4C001F5AEF /* FriendsViewController.swift */,
-				B54697A919C33130001F5AEF /* Models */,
 				B5E2665019C0FADA00E204DD /* Main.storyboard */,
 				B5E2665319C0FADA00E204DD /* Images.xcassets */,
 				B5E2665519C0FADA00E204DD /* LaunchScreen.xib */,
