@@ -57,6 +57,37 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
         println("User aborted sending a photo")
     }
     
+    @IBAction func sendPhoto(segue:UIStoryboardSegue) {
+        println("Sending photo")
+        
+        let (fileName, snapFileName) = CameraViewController.getSnapFileName()
+        let friendsViewController = segue.sourceViewController as FriendsViewController
+        
+        // Upload to parse
+        var uploadFile = PFFile(name: fileName, contentsAtPath: snapFileName)
+        uploadFile.saveInBackgroundWithBlock { (success:Bool, _) in
+            if success {
+                println("Photo uploaded")
+                
+                
+                // Send to friends
+                let friends = friendsViewController.getTargetFriends()
+                println("About to send photo to \(countElements(friends)) friends")
+                
+                for friend in friends {
+                    var msg = ChatPicture()
+                    msg.fromUser = ChatUser.currentUser()
+                    msg.toUser = friend
+                    msg.image = uploadFile
+                    msg.saveInBackground()
+                }
+                
+            } else {
+                // Show very sad panda
+            }
+        }
+    }
+    
     // find camera
     func findCamera(position : AVCaptureDevicePosition) -> Bool {
         

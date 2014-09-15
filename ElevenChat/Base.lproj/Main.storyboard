@@ -100,12 +100,44 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="0sB-uB-Mqn" customClass="FriendCell" customModule="ElevenChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sB-uB-Mqn" id="Ux9-2E-Gyi">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox_unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-jL-xeG">
+                                            <rect key="frame" x="288" y="10" width="24" height="24"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWK-yp-fgg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="checkBoxTapped:" destination="0sB-uB-Mqn" eventType="touchUpInside" id="hz0-mx-Xtp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkBox" destination="J0E-jL-xeG" id="QsF-46-1UM"/>
+                                    <outlet property="checkBoxTapped" destination="SWK-yp-fgg" id="8VL-Rv-QRM"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Emz-by-e52" id="13z-Jx-fKc"/>
                             <outlet property="delegate" destination="Emz-by-e52" id="lsB-5h-ZjK"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="9h1-dU-Ccy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="hAT-bl-5Lz">
+                            <connections>
+                                <segue destination="wHq-0X-bhb" kind="unwind" unwindAction="sendPhoto:" id="p4v-dB-hSk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcr-G7-8wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +157,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBN-cn-HvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="358" y="-67"/>
+            <point key="canvasLocation" x="353" y="-122"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="SIW-Nf-y8f">
@@ -151,7 +183,11 @@
                                 <segue destination="wHq-0X-bhb" kind="unwind" unwindAction="rewindFromSegue:" id="Wdi-r7-7vg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="afC-IF-Upk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="afC-IF-Upk">
+                            <connections>
+                                <segue destination="Emz-by-e52" kind="push" id="sVh-kE-MOQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imagePreview" destination="kwY-6Q-x4q" id="IRC-SD-kOO"/>
@@ -159,12 +195,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvy-UY-1Zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-67"/>
+            <point key="canvasLocation" x="750" y="-122"/>
         </scene>
     </scenes>
     <resources>
         <image name="Rotate" width="25" height="25"/>
         <image name="cam-photo-btn" width="67" height="67"/>
+        <image name="checkbox_unchecked" width="48" height="48"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

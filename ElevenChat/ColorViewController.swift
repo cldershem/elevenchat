@@ -18,6 +18,8 @@ class ColorViewController : UIViewController {
 
 class PinkViewController : ColorViewController {
     
+//http://pastebin.com/DXQkX70g
+    
 }
 class BlueViewController : ColorViewController {
     

@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Cameron Dershem. All rights reserved.
 //
 
+// add this to your shiznit
+// http://pastebin.com/DXQkX70g
+
 import Foundation
 
 class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
@@ -13,6 +16,7 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
     // PFQueryViewController is a subclass of TableViewController from Parse SDK
     
     var searchText = ""
+    var selectFriendMode = false
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
@@ -29,6 +33,7 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
         
         // fixes annoying UI bug
         self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
+        println("MODE: \(selectFriendMode)")
     }
     
     // MARK: tableView
@@ -62,30 +67,54 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
-        var cell = tableView.dequeueReusableCellWithIdentifier("PFTableViewCell") as PFTableViewCell?
+        
+        var cellIdentifier = selectFriendMode ? "FriendCell" : "PFTableViewCell"
+//        var cellIdentifier = selectFriendMode ? "PFTableViewCell" : "FriendCell"
+//        var cellIdentifier = "FriendCell"
+        println("cellID is \(cellIdentifier)")
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as PFTableViewCell?
         
         if cell == nil {
-            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "PFTableViewCell")
+            println("cell is \(cell)")
+            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+        } else {
+            println("cell is not nil and is \(cell)")
         }
+        println("cell after if nil \(cell)")
         
         if object is Friendship {
+            println("Object is Friendship")
             var friends = object as Friendship
             
-            cell?.textLabel?.text = friends.theFriend?.username
+            if cell is FriendCell {
+                println("cell is FriendCell")
+                var friendCell = cell as? FriendCell
+                friendCell?.setupCell(friends)
+            } else {
+                println("cell is not FriendCell")
+                cell?.textLabel?.text = friends.theFriend?.username
+            }
         } else if object is ChatUser {
+            println("Object is ChatUser")
             var user = object as ChatUser
             
             cell?.textLabel?.text = user.username
+        } else {
+            println("object is something?")
         }
         
+        println("end of func. cell is \(cell)")
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if selectFriendMode { return 0 }
         return 44
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if selectFriendMode { return nil }
         var headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as UITableViewCell
         
         return headerCell as UIView
@@ -123,6 +152,20 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
                 println("adding \(bff.currentUser!.username) -> \(bff.theFriend!.username)")
             }
         }
+    }
+    
+    func getTargetFriends() -> [ChatUser]
+    {
+        var targetFriends = [ChatUser]()
+        let friendships = self.objects as? [Friendship]
+        
+        for friend in friendships! {
+            if friend.selected {
+                targetFriends.append(friend.theFriend!)
+            }
+        }
+        
+        return targetFriends
     }
     
     // MARK: Search Bar
