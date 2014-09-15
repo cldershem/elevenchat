@@ -3,19 +3,16 @@ ElevenChat
 
 A Snapchat clone written in Swift developed for the iPhone.
 
-- AUTHORS
-  - Cameron Dershem
-  - Terrence Kunstek
-  - Eleven Fifty
+###AUTHORS
+- Cameron Dershem
+- Terrence Kunstek
+- Eleven Fifty
 
-- COPYRIGHT
-  - Cameron Dershem
+###COPYRIGHT
+- Cameron Dershem
 
-- LICENSE
-  - ...
+###LICENSE
+- ...
 
 CHANGELOG
 =========
--
--
--
