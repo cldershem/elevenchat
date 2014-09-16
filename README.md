@@ -16,3 +16,4 @@ A Snapchat clone written in Swift developed for the iPhone.
 
 CHANGELOG
 =========
+Fixed "loading bug" by removing bad referencing outlet, aka the click and dragger.
