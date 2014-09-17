@@ -23,10 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DBSession.setSharedSession(dbSession)
         
         // set up parse for testing
-        Parse.setApplicationId("biYrAsTEvW7bnVjcruzax7Nqqb8la2oD5GzoEyG2", clientKey: "JhRbQfHK90qVbefxPPsjuKltt3rD3bjwF5MOpkAp")
+//        Parse.setApplicationId("biYrAsTEvW7bnVjcruzax7Nqqb8la2oD5GzoEyG2", clientKey: "JhRbQfHK90qVbefxPPsjuKltt3rD3bjwF5MOpkAp")
         
         // elevenfifty for realzies
-//        Parse.setApplicationId("T1cb1yFelU8TAZYqHFk1JMBc0hunnb4ePOOJuSb5", clientKey: "ssdWbqBmUXhIOmvxi6lZnJfnGfIXnPea5sK2ic2Z")
+        Parse.setApplicationId("T1cb1yFelU8TAZYqHFk1JMBc0hunnb4ePOOJuSb5", clientKey: "ssdWbqBmUXhIOmvxi6lZnJfnGfIXnPea5sK2ic2Z")
         
 //        var testObject = PFObject(className: "TestObject")
 //        testObject["foo"] = "bar"

@@ -11,7 +11,7 @@ import UIKit
 class RootViewController: UIPageViewController, UIPageViewControllerDataSource,
     PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
 
-    var pinkViewController : PinkViewController!
+    var messagesViewController : MessagesViewController!
     var cameraViewController : CameraViewController!
     var friendsViewController : FriendsViewController!
     
@@ -22,9 +22,9 @@ class RootViewController: UIPageViewController, UIPageViewControllerDataSource,
         self.dataSource = self
         
         // Reference all of the view controllers on the storyboard
-        self.pinkViewController = self.storyboard?.instantiateViewControllerWithIdentifier("pinkViewController") as? PinkViewController
-        self.pinkViewController.title = "Pink"
-        println("Pink!")
+        self.messagesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("messagesViewController") as? MessagesViewController
+        self.messagesViewController.title = "Messages"
+        println("Messages!")
         
         self.cameraViewController = self.storyboard?.instantiateViewControllerWithIdentifier("cameraViewController") as? CameraViewController
         self.cameraViewController.title = "Camera"
@@ -47,10 +47,10 @@ class RootViewController: UIPageViewController, UIPageViewControllerDataSource,
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
         switch viewController.title! {
-        case "Pink":
+        case "Messages":
             return nil
         case "Camera":
-            return pinkViewController
+            return messagesViewController
         case "Friends":
             return cameraViewController
         default:
@@ -63,7 +63,7 @@ class RootViewController: UIPageViewController, UIPageViewControllerDataSource,
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         switch viewController.title! {
-        case "Pink":
+        case "Messages":
             return cameraViewController
         case "Camera":
             return friendsViewController

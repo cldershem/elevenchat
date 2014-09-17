@@ -83,6 +83,7 @@ class CameraViewController: UIViewController, DBRestClientDelegate {
                 }
                 
             } else {
+                println("upload failed")
                 // Show very sad panda
             }
         }

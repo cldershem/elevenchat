@@ -69,42 +69,40 @@ class FriendsViewController : PFQueryTableViewController, UISearchBarDelegate {
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
         
         var cellIdentifier = selectFriendMode ? "FriendCell" : "PFTableViewCell"
-//        var cellIdentifier = selectFriendMode ? "PFTableViewCell" : "FriendCell"
-//        var cellIdentifier = "FriendCell"
-        println("cellID is \(cellIdentifier)")
+//        println("cellID is \(cellIdentifier)")
         
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as PFTableViewCell?
         
         if cell == nil {
-            println("cell is \(cell)")
+//            println("cell is \(cell)")
             cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
         } else {
-            println("cell is not nil and is \(cell)")
+//            println("cell is not nil and is \(cell)")
         }
-        println("cell after if nil \(cell)")
+//        println("cell after if nil \(cell)")
         
         if object is Friendship {
-            println("Object is Friendship")
+//            println("Object is Friendship")
             var friends = object as Friendship
             
             if cell is FriendCell {
-                println("cell is FriendCell")
+//                println("cell is FriendCell")
                 var friendCell = cell as? FriendCell
                 friendCell?.setupCell(friends)
             } else {
-                println("cell is not FriendCell")
+//                println("cell is not FriendCell")
                 cell?.textLabel?.text = friends.theFriend?.username
             }
         } else if object is ChatUser {
-            println("Object is ChatUser")
+//            println("Object is ChatUser")
             var user = object as ChatUser
             
             cell?.textLabel?.text = user.username
         } else {
-            println("object is something?")
+//            println("object is something?")
         }
         
-        println("end of func. cell is \(cell)")
+//        println("end of func. cell is \(cell)")
         return cell
     }
     

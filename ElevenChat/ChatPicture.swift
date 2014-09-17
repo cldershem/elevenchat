@@ -20,12 +20,12 @@ class ChatPicture : PFObject, PFSubclassing {
     
     var fromUser: ChatUser? {
         get { return objectForKey("fromUser") as? ChatUser }
-        set { setObject(newValue, forKey: "toUser") }
+        set { setObject(newValue, forKey: "fromUser") }
     }
     
     var toUser: ChatUser? {
         get { return objectForKey("toUser") as? ChatUser }
-        set { setObject(newValue, forKey: "fromUser") }
+        set { setObject(newValue, forKey: "toUser") }
     }
     
     var image: PFFile? {

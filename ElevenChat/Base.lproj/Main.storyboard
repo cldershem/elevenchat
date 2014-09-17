@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hTO-HQ-24g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hTO-HQ-24g">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -13,23 +12,31 @@
             </objects>
             <point key="canvasLocation" x="-42" y="-32"/>
         </scene>
-        <!--Pink View Controller-->
-        <scene sceneID="Mey-LM-rHw">
+        <!--Messages View Controller-->
+        <scene sceneID="upx-E4-GP8">
             <objects>
-                <viewController storyboardIdentifier="pinkViewController" id="0fZ-cQ-4aC" customClass="PinkViewController" customModule="ElevenChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="os3-fi-9CL"/>
-                        <viewControllerLayoutGuide type="bottom" id="4wg-mT-rpa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QtQ-v7-Zyt">
+                <tableViewController storyboardIdentifier="messagesViewController" id="fgm-AN-HGk" customClass="MessagesViewController" customModule="ElevenChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HeH-Gy-W7t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UDy-gj-PRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="Ecq-DE-XyO">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ecq-DE-XyO" id="Kr1-uT-nGd">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fgm-AN-HGk" id="3Sz-PM-3og"/>
+                            <outlet property="delegate" destination="fgm-AN-HGk" id="T6w-0m-WIB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="153-dj-oUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-385" y="578"/>
+            <point key="canvasLocation" x="-407" y="546"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="SYg-eD-1pv">
@@ -132,9 +139,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="9h1-dU-Ccy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="hAT-bl-5Lz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="a96-vR-QYA">
                             <connections>
-                                <segue destination="wHq-0X-bhb" kind="unwind" unwindAction="sendPhoto:" id="p4v-dB-hSk"/>
+                                <segue destination="wHq-0X-bhb" kind="unwind" unwindAction="sendPhoto:" id="zGb-0T-nj3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

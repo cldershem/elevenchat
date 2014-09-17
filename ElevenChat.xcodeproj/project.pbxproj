@@ -18,6 +18,7 @@
 		B54697AC19C36397001F5AEF /* ChatPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54697AB19C36397001F5AEF /* ChatPicture.swift */; };
 		B54697AE19C36964001F5AEF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54697AD19C36964001F5AEF /* PreviewViewController.swift */; };
 		B54697B019C3733C001F5AEF /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54697AF19C3733C001F5AEF /* FriendCell.swift */; };
+		B5E1BA1919C8F6F700842974 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1BA1819C8F6F700842974 /* MessagesViewController.swift */; };
 		B5E2664D19C0FADA00E204DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664C19C0FADA00E204DD /* AppDelegate.swift */; };
 		B5E2664F19C0FADA00E204DD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2664E19C0FADA00E204DD /* RootViewController.swift */; };
 		B5E2665219C0FADA00E204DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E2665019C0FADA00E204DD /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		B54697AB19C36397001F5AEF /* ChatPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatPicture.swift; sourceTree = "<group>"; };
 		B54697AD19C36964001F5AEF /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		B54697AF19C3733C001F5AEF /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		B5E1BA1819C8F6F700842974 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		B5E2664719C0FADA00E204DD /* ElevenChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevenChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E2664B19C0FADA00E204DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E2664C19C0FADA00E204DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				B5E2664E19C0FADA00E204DD /* RootViewController.swift */,
 				B54697A419C32D4C001F5AEF /* FriendsViewController.swift */,
 				B54697AD19C36964001F5AEF /* PreviewViewController.swift */,
+				B5E1BA1819C8F6F700842974 /* MessagesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				B54697A519C32D4C001F5AEF /* FriendsViewController.swift in Sources */,
 				B54697A319C250F1001F5AEF /* ChatUser.swift in Sources */,
 				B54697AE19C36964001F5AEF /* PreviewViewController.swift in Sources */,
+				B5E1BA1919C8F6F700842974 /* MessagesViewController.swift in Sources */,
 				B54697B019C3733C001F5AEF /* FriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
