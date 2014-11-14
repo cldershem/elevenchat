@@ -22,5 +22,5 @@ latter being more likely).
 
 CHANGELOG
 =========
-Added License.
-Fixed "loading bug" by removing bad referencing outlet, aka the click and dragger.
+- Added License.
+- Fixed "loading bug" by removing bad referencing outlet, aka the click and dragger.
