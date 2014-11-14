@@ -12,7 +12,7 @@ A Snapchat clone written in Swift developed for the iPhone.
 - Cameron Dershem
 
 ###LICENSE
-- ...
+- MIT
 
 CHANGELOG
 =========
